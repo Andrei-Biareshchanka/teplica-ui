@@ -8,10 +8,22 @@ import {
   useTheme,
   useMediaQuery,
 } from '@mui/material';
-import { CheckCircle, Sprout, Factory, Droplet } from 'lucide-react';
+import {
+  CheckCircle,
+  Sprout,
+  Factory,
+  Droplet,
+  LucideIcon,
+} from 'lucide-react';
+
+interface BlockData {
+  icon: LucideIcon; // Тип для иконок из библиотеки lucide-react
+  title: string;
+  description: string;
+}
 
 // Массив данных для блоков
-const blocks = [
+const blocks: BlockData[] = [
   {
     icon: CheckCircle,
     title: 'Индивидуальный подход',
@@ -38,8 +50,13 @@ const blocks = [
   },
 ];
 
-// Общий компонент для блока
-function AboutBlock({ icon: Icon, title, description }) {
+interface AboutBlockProps {
+  icon: LucideIcon;
+  title: string;
+  description: string;
+}
+
+function AboutBlock({ icon: Icon, title, description }: AboutBlockProps) {
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
 
