@@ -1,14 +1,34 @@
 :root {
+  /* Основной текст: тёмно-серый (для хорошей читаемости). */
+  --primary: #212121;
+
+  /* Вспомогательный текст: светло-серый */
+  --secondary: #757575;
+
+  /* Назначение: акцентные элементы (кнопки, ссылки), логотип или заголовки. Этот цвет символизирует рост и природу. */
+  --green: #4CAF50;
+  
+  /* уведомления,
+      важные акценты или элементы,
+      подчёркивающие динамику (например, маркеры новых продуктов). */
+  --orange: #FF9800; 
+
+  /* Основной фон: светлый серо-зелёный (нейтральный, но с оттенком природы) */
+  --green-light: #F4F7F1;
+
+  /* Второстепенный фон: мягкий серый (подходит для карточек, секций). */
+  --gray-light: #E0E0E0;
+
   --background: #ffffff;
   --foreground: #171717;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+} */
 
 html,
 body {
@@ -17,8 +37,8 @@ body {
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
+  color: var(--primary);
+  background: var(--green-light);
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -35,8 +55,8 @@ a {
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
   }
-}
+} */
