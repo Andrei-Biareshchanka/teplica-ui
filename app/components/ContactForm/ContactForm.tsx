@@ -42,6 +42,7 @@ export default function ContactForm() {
       } else {
         setErrorMessage('Произошла ошибка при отправке. Попробуйте снова.');
       }
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
     } catch (error) {
       setErrorMessage('Ошибка соединения. Попробуйте снова позже.');
     } finally {
