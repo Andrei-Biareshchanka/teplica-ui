@@ -2,10 +2,10 @@
 
 import { Box, Typography, Container } from '@mui/material';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import { Navigation, Pagination } from 'swiper/modules';
 
 interface Slide {
   image: string;
@@ -21,33 +21,34 @@ const slides: Slide[] = [
   },
   {
     image: '/images/teplica3.jpg',
-    title: 'Система орошения',
-    description: 'Современные системы полива для сельскохозяйственных культур.',
+    title: 'Автоматическое система проветривания',
+    description: 'Форточки можно установить на разном уровне',
   },
   {
     image: '/images/teplica4.jpg',
-    title: 'Климатическая камера',
-    description: 'Идеальные условия для выращивания растений.',
+    title: 'Автоматическое зашторивание',
+    description: 'Позволяет создавать нужный микроклимат в теплице',
   },
   {
     image: '/images/teplica5.jpg',
-    title: 'Металлические конструкции',
-    description: 'Навесы и ангары любой сложности.',
+    title: 'Промышленные теплицы с разной высотой',
+    description:
+      'Можно выбрать высоту стен теплицы до 2м и в коньке будет 5.5м',
   },
   {
     image: '/images/teplica6.jpg',
-    title: 'Металлические конструкции',
-    description: 'Навесы и ангары любой сложности.',
+    title: 'Фермерские теплицы под пленку',
+    description: 'Устанавливаем теплицы под пленку и под поликарбонат',
   },
   {
     image: '/images/angar3.jpg',
-    title: 'Металлические конструкции',
-    description: 'Навесы и ангары любой сложности.',
+    title: 'Ангар с поликарбонатным покрытием',
+    description: 'Изготавливаем ангары для промышленных нужд',
   },
   {
     image: '/images/angar2.jpg',
     title: 'Металлические конструкции',
-    description: 'Навесы и ангары любой сложности.',
+    description: 'Теплицы, навесы и ангары любой сложности.',
   },
 ];
 

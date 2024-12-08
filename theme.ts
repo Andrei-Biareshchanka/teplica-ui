@@ -2,26 +2,33 @@
 
 import { createTheme } from '@mui/material';
 
+const getCssVariable = (variableName: string, fallback: string) => {
+  if (typeof window !== 'undefined' && document?.documentElement) {
+    return getComputedStyle(document.documentElement).getPropertyValue(variableName).trim() || fallback;
+  }
+  return fallback;
+};
+
 let theme = createTheme({});
 
 theme = createTheme(theme, {
   cssVariables: true,
   palette: {
     primary: {
-      main: 'var(--green)', // Цвет по умолчанию
+      main: getCssVariable('--green', '#4caf50'),
       contrastText: "#FFFFFF",
     },
     secondary: {
-      main: 'var(--secondary)',
+      main: getCssVariable('var(--secondary)', '#757575'),
       contrastText: "#FFFFFF",
     },
     background: {
-      default: 'var(--green-light)',
+      default: getCssVariable('var(--secondary)', '#F4F7F1'),
       paper: "#FFFFFF",
     },
     text: {
-      primary: 'var(--primary)',
-      secondary: 'var(--secondary)',
+      primary: getCssVariable('var(--primary)', '#212121'),
+      secondary: getCssVariable('var(--secondary)', '#757575'),
     },
   },
   zIndex: {
